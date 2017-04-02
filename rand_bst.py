@@ -54,13 +54,18 @@ def estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_tree
 
 def plot_rbst_lin_probs(num_nodes_start, num_nodes_end, num_trees):
     d = estimate_list_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
-    #stuff
+    fig1 = plt.fiture(1)
+    fig1.suptitle('Plot_rbst_lin_probs')
+    plt.xlim([num_nodes_start,num_nodes_end])
+    plt.plot(d)    
     pass
 
 def plot_rbst_balance_probs(num_nodes_start, num_nodes_end, num_trees):
     d = estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
-    # stuff
-    
+    fig1 = plt.fiture(1)
+    fig1.suptitle('Plot_balance_lin_probs')
+    plt.xlim([num_nodes_start,num_nodes_end])
+    plt.plot(d)  
     pass
 
 ### ========== UNIT TESTS =============
@@ -145,13 +150,13 @@ def unit_test_07(num_nodes_start, num_nodes_end):
 
 
 if __name__ == '__main__':
-    unit_test_01()
-    unit_test_02()
-    unit_test_03()
-    unit_test_04()
-    unit_test_05()
-    unit_test_06()
-    unit_test_07()
+#    unit_test_01()
+#    unit_test_02()
+#    unit_test_03()
+#    unit_test_04()
+#    unit_test_05()
+    unit_test_06(0,10)
+    unit_test_07(0,10)
     
 
 
