@@ -8,17 +8,11 @@
 
 ###############################################
 # 1. the limit approaches zero
-# 2. the limit approaches zero
+# 2. the limit approaches .25
 # 3. an exponential approaching zero
-# 4. 
+# 4. a flat histogram with a spike at 1 but otherwise flat at .25
 #
-
-
-
-
-
-
-
+###############################################
 
 
 from BSTNode import BSTNode
