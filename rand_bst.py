@@ -59,6 +59,9 @@ def unit_test_01():
     r.setRightChild(rc)
     assert ( r.getLeftChild().getKey()   == 3 )
     assert ( r.getRightChild().getKey() == 10 )
+    #
+    print('root=%s, lc=%s, rc=%s' % (r, lc, rc))
+    #
 
 ## unit_test_01() contstructs two bst's.
 ## bst
@@ -124,7 +127,8 @@ def unit_test_07(num_nodes_start, num_nodes_end):
 
 if __name__ == '__main__':
     unit_test_01()
-
+    unit_test_02()
+    unit_test_03()
     
 
 

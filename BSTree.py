@@ -1,4 +1,4 @@
-
+\
 #############################
 # module: BSTree.py
 # description: binary search tree
@@ -76,17 +76,19 @@ class BSTree:
     def heightOf(self):
         if self == None:
             return -1
-        return max(heightOf(self.getLeftChild()),heightOf(self.getRightChild())) +1
+        return max(currentNode.heightOf(self.getLeftChild()),heightOf(self.getRightChild())) +1
+
+
 	
     def isBalanced(self):
         if self == None:
 # ------------------------------------
             return True
 # ------------------------------------
-        else:
-            if abs(heightOf(self.getLeftChild()) - heightOf(self.getRightChild()))<= 1:
-                return True
-            return False
+        currNode = self.__root
+        if abs(self.heightOf(currNode.getLeftChild()) - self.heightOf(currNode.getRightChild()))<= 1:
+            return True
+        return False
 	
     def __displayInOrder(self, currnode):
         if currnode == None:
