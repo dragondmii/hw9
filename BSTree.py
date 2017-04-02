@@ -77,24 +77,32 @@ class BSTree:
         if self == None:
             return -1
         self2 = self.__root
-        left_n = self2.getLeftChild()
-        left_h = left_n.heightOf()
-        right_n = self2.getRightChild()
-        right_h = right_n.heightOf()
-        return max(left_h,right_h) +1
+        
+        return heightOfNode(self2)
+
+    def heightOfNode(self, node):
+        if self == None:
+            return -1
+        left_n = node.getLeftChild()
+        right_n = node.getRightChild()
+
+        left_h = heightOfNode(left_n)
+        right_h = heightOfNode(right_h)
+
+        return max(left_h,right_h)+1
+
 
 	
     def isBalanced(self):
         if self == None:
-# ------------------------------------
             return True
-# ------------------------------------
 
-        self2 = self.__root
-        left_n = self2.getLeftChild()
-        left_h = left_n.heightOf()
-        right_n = self2.getRightChild()
-        right_h = right_n.heightOf()
+        left_n = node.getLeftChild()
+        right_n = node.getRightChild()
+
+        left_h = heightOfNode(left_n)
+        right_h = heightOfNode(right_h)
+
         if abs(left_h - right_h)<= 1:
             return True
         return False
