@@ -96,9 +96,10 @@ class BSTree:
     def isBalanced(self):
         if self == None:
             return True
+        self2 = self.__root
 
-        left_n = node.getLeftChild()
-        right_n = node.getRightChild()
+        left_n = self2.getLeftChild()
+        right_n = self2.getRightChild()
 
         left_h = heightOfNode(left_n)
         right_h = heightOfNode(right_h)
