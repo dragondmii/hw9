@@ -74,13 +74,20 @@ class BSTree:
                 raise Exception('insertKey: parNode=None; key= ' + str(key))
      
     def heightOf(self):
-        ## your code
-	pass
-
+        if self == None:
+            return -1
+        return max(heightOf(self.getLeftChild()),heightOf(self.getRightChild())) +1
+	
     def isBalanced(self):
-        ## your code
-	pass
-
+        if self == None:
+# ------------------------------------
+            return True
+# ------------------------------------
+        else:
+            if abs(heightOf(self.getLeftChild()) - heightOf(self.getRightChild()))<= 1:
+                return True
+            return False
+	
     def __displayInOrder(self, currnode):
         if currnode == None:
             print('NULL')
@@ -93,9 +100,10 @@ class BSTree:
         self.__displayInOrder(self.__root)
 
     def isList(self):
-        ## your code 
-	pass
-
+        if ((self.getNumNodes() - self.heightOf())== 1):
+            return True
+        return False
+	
                 
 
 
