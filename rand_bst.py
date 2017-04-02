@@ -41,6 +41,7 @@ def estimate_balance_prob_in_rand_bsts_with_num_nodes(num_trees, num_nodes, a, b
     bsList = []
     for x in xrange(num_trees):
         temp = gen_rand_bst(num_nodes, a, b)
+        print x
         if temp.isBalanced():
             countList = countList + 1
             bsList.append(temp)

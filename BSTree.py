@@ -100,12 +100,13 @@ class BSTree:
     def isBalanced(self):
         if self == None:
             return True
+
         self2 = self.__root
 
-        if self2.getLeftChild() != None:
-            left_n = self2.getLeftChild()
-        if self2.getRightChild() != None:
-            right_n = self2.getRightChild()
+        #if self2.getLeftChild() != None:
+        left_n = self2.getLeftChild()
+        #if self2.getRightChild() != None:
+        right_n = self2.getRightChild()
 
         #if left_n != None:
         left_h = self.heightOfNode(left_n)
