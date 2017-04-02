@@ -15,7 +15,7 @@ import numpy as np
 def gen_rand_bst(num_nodes, a, b):
     bsTree  = BSTree()
     for x in xrange(num_nodes):
-        bsTree.insertKey(np.randint(a,b+1))
+        bsTree.insertKey(np.random.randint(a,b+1))
     return bsTree
     pass
 
