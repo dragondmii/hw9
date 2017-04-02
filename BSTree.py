@@ -78,16 +78,18 @@ class BSTree:
             return -1
         self2 = self.__root
         
-        return heightOfNode(self2)
+        return self.heightOfNode(self2)
 
     def heightOfNode(self, node):
         if self == None:
             return -1
+        if self.__root == None:
+            return -1
         left_n = node.getLeftChild()
         right_n = node.getRightChild()
 
-        left_h = heightOfNode(left_n)
-        right_h = heightOfNode(right_h)
+        left_h = self.heightOfNode(left_n)
+        right_h = self.heightOfNode(right_h)
 
         return max(left_h,right_h)+1
 
@@ -101,8 +103,8 @@ class BSTree:
         left_n = self2.getLeftChild()
         right_n = self2.getRightChild()
 
-        left_h = heightOfNode(left_n)
-        right_h = heightOfNode(right_h)
+        left_h = self.heightOfNode(left_n)
+        right_h = self.heightOfNode(right_h)
 
         if abs(left_h - right_h)<= 1:
             return True
