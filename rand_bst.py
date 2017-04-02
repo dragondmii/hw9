@@ -127,11 +127,8 @@ def unit_test_07(num_nodes_start, num_nodes_end):
 
 if __name__ == '__main__':
     unit_test_01()
-    print "fuck this shit"
-    r.heightOf()
-
-#    unit_test_02()
-#    unit_test_03()
+    unit_test_02()
+    unit_test_03()
     
 
 

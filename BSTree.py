@@ -89,8 +89,13 @@ class BSTree:
 # ------------------------------------
             return True
 # ------------------------------------
-        currNode = self.__root
-        if abs(self.heightOf(currNode.getLeftChild()) - self.heightOf(currNode.getRightChild()))<= 1:
+
+        self2 = self.__root
+        left_n = self2.getLeftChild()
+        left_h = left_n.heightOf()
+        right_n = self2.getRightChild()
+        right_h = right_n.heightOf()
+        if abs(left_h - right_h)<= 1:
             return True
         return False
 	
