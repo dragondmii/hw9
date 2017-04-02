@@ -85,6 +85,8 @@ class BSTree:
             return -1
         if self.__root == None:
             return -1
+        if node == None:
+            retrun -1
         left_n = node.getLeftChild()
         right_n = node.getRightChild()
 
