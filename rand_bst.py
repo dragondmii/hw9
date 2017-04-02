@@ -70,7 +70,7 @@ def estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_tree
 
 def plot_rbst_lin_probs(num_nodes_start, num_nodes_end, num_trees):
     d = estimate_list_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
-    fig1 = plt.fiture(1)
+    fig1 = plt.figure(1)
     fig1.suptitle('Plot_rbst_lin_probs')
     plt.xlim([num_nodes_start,num_nodes_end])
     plt.plot(d)    
@@ -78,7 +78,7 @@ def plot_rbst_lin_probs(num_nodes_start, num_nodes_end, num_trees):
 
 def plot_rbst_balance_probs(num_nodes_start, num_nodes_end, num_trees):
     d = estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
-    fig1 = plt.fiture(1)
+    fig1 = plt.figure(1)
     fig1.suptitle('Plot_balance_lin_probs')
     plt.xlim([num_nodes_start,num_nodes_end])
     plt.plot(d)  
