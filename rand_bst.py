@@ -13,12 +13,22 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def gen_rand_bst(num_nodes, a, b):
-    ## your code
+    bsTree  = BSTree()
+    for x in xrange(num_nodes):
+        bsTree.insertKey(np.randint(a,b+1))
+    return bsTree
     pass
 
 def estimate_list_prob_in_rand_bsts_with_num_nodes(num_trees, num_nodes, a, b):
-    ## your code
-    pass
+    countList = 0
+    bsList = []
+    for x in xrange(num_trees):
+        temp = gen_rand_bst(num_nodes, a, b)
+        if temp.isList():
+            countList = countList + 1
+            bsList.append(temp)
+    return (float(countList)/float(num_trees), bsList)
+
 
 def estimate_list_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, a, b):
     d = {}
@@ -27,8 +37,14 @@ def estimate_list_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 
     return d
 
 def estimate_balance_prob_in_rand_bsts_with_num_nodes(num_trees, num_nodes, a, b):
-    ## your code
-    pass
+    countList = 0
+    bsList = []
+    for x in xrange(num_trees):
+        temp = gen_rand_bst(num_nodes, a, b)
+        if temp.isBalanced():
+            countList = countList + 1
+            bsList.append(temp)
+    return (float(countList)/float(num_trees), bsList)
 
 def estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, a, b):
     d = {}
@@ -37,11 +53,14 @@ def estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_tree
     return d
 
 def plot_rbst_lin_probs(num_nodes_start, num_nodes_end, num_trees):
-    ## your code
+    d = estimate_list_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
+    #stuff
     pass
 
 def plot_rbst_balance_probs(num_nodes_start, num_nodes_end, num_trees):
-    ## your code
+    d = estimate_balance_probs_in_rand_bsts(num_nodes_start, num_nodes_end, num_trees, 0 , 1000000)
+    # stuff
+    
     pass
 
 ### ========== UNIT TESTS =============
@@ -129,6 +148,10 @@ if __name__ == '__main__':
     unit_test_01()
     unit_test_02()
     unit_test_03()
+    unit_test_04()
+    unit_test_05()
+    unit_test_06()
+    unit_test_07()
     
 
 
