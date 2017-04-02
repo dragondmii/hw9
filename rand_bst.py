@@ -172,8 +172,9 @@ if __name__ == '__main__':
 #    unit_test_04()
 #    unit_test_05()
 #    unit_test_06(0,10)
-    unit_test_07(0,10)
-    
+#    unit_test_07(0,10)
+    plot_rbst_lin_probs(0,10,50)
+    plot_rbst_balance_probs(0,10,50)
 
 
 
