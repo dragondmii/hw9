@@ -6,6 +6,21 @@
 # bugs to vladimir dot kulyukin at usu dot edu
 ###############################################
 
+###############################################
+# 1. the limit approaches zero
+# 2.
+#
+#
+#
+
+
+
+
+
+
+
+
+
 from BSTNode import BSTNode
 from BSTree import BSTree
 import random
